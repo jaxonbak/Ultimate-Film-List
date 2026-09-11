@@ -154,7 +154,7 @@ function renderMovie(m) {
     <div data-action="seen" data-title="${titleAttr}" style="width:20px;height:20px;border-radius:4px;flex-shrink:0;background:${isSeen?'#2563eb':'#0f0f0f'};border:2px solid ${isSeen?'#3b82f6':'#374151'};display:flex;align-items:center;justify-content:center;box-shadow:${isSeen?'0 0 8px rgba(59,130,246,0.5)':'none'};cursor:pointer">${isSeen?'<span style="color:#fff;font-size:11px;font-weight:bold">\u2713</span>':''}</div>
     <div style="flex:1;min-width:0">
       <div style="display:flex;align-items:baseline;gap:8px;flex-wrap:wrap">
-        <span style="font-size:14px;font-weight:600;color:${isSeen?'#7d8694':'#f1f5f9'};text-decoration:${isSeen?'line-through':'none'};text-decoration-color:#3b82f6">${titleEsc}</span>
+        <span style="font-size:14px;font-weight:600;color:${isSeen?'#7d8694':'#f1f5f9'};text-decoration:${isSeen?'none':'none'};text-decoration-color:#3b82f6">${titleEsc}</span>
         <span style="color:#374151;font-size:12px">${m.year}</span>
         <span style="color:#4b5563;font-size:12px;font-style:italic">${e(m.genre)}</span>
       </div>
