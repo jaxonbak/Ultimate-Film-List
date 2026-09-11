@@ -152,7 +152,7 @@ const dim = isSeen && !inFav;
   const tagsHtml = tags.map(t => `<span class="tag">${e(t)}</span>`).join("");
 
   return `<div style="display:flex;flex-direction:column;gap:0">
-    <div class="movie-row" style="background:${dim?'#0a1628':'#111827'};border:1px solid ${dim?'#1d4ed8':'#1f2937'};border-radius:${(state.filter==='favorites'||state._currentSec==='favorites-top')?'8px 8px 0 0':'8px'};opacity:${dim?0.8:1};box-shadow:${dim?'inset 0 0 20px rgba(29,78,216,0.08)':'none'}">
+    <div class="movie-row" style="background:${dim?'#0a1628':'#111827'};border:1px solid ${dim?'#1d4ed8':'#1f2937'};border-radius:8px;opacity:${dim?0.8:1};box-shadow:${dim?'inset 0 0 20px rgba(29,78,216,0.08)':'none'}">
     <div data-action="seen" data-title="${titleAttr}" style="width:20px;height:20px;border-radius:4px;flex-shrink:0;background:${isSeen?'#2563eb':'#0f0f0f'};border:2px solid ${isSeen?'#3b82f6':'#374151'};display:${inFav?'none':'flex'};align-items:center;justify-content:center;box-shadow:${isSeen?'0 0 8px rgba(59,130,246,0.5)':'none'};cursor:pointer">${isSeen?'<span style="color:#fff;font-size:11px;font-weight:bold">\u2713</span>':''}</div>
     <div style="flex:1;min-width:0">
       <div style="display:flex;align-items:baseline;gap:8px;flex-wrap:wrap">
@@ -167,7 +167,7 @@ const dim = isSeen && !inFav;
       <div data-action="pri" data-title="${titleAttr}" class="btn-icon" style="font-size:15px;opacity:${isPri?1:0.5};filter:${isPri?'drop-shadow(0 0 4px rgba(52,211,153,0.6))':'none'}">\u23f3</div>
       <div data-action="fav" data-title="${titleAttr}" class="btn-icon" style="font-size:18px;opacity:${isFav?1:0.3};filter:${isFav?'drop-shadow(0 0 4px rgba(251,191,36,0.6))':'grayscale(1)'}">\u2b50</div>
     </div>
-  </div>${state.filter==='favorites'?`<textarea data-note-for="${titleAttr}" placeholder="Why is this a favorite?" style="width:100%;background:#0a1628;border:1px solid #1d4ed8;border-top:none;border-radius:0 0 8px 8px;color:#9ca3af;padding:8px 12px;font-size:12px;font-family:inherit;resize:vertical;min-height:36px;outline:none">${e(state.notes[m.title]||'')}</textarea>`:''}
+  </div>${state.filter==='favorites'?`<textarea data-note-for="${titleAttr}" placeholder="Why is this a favorite?" style="width:100%;background:transparent;border:none;border-radius:0;color:#6b7280;padding:6px 14px 0;margin-top:5px;font-size:12px;font-family:inherit;resize:vertical;min-height:32px;outline:none">${e(state.notes[m.title]||'')}</textarea>`:''}
   </div>`;
 }
 
